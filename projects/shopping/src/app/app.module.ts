@@ -13,6 +13,7 @@ import { ChildComponent } from './components/child/child.component';
 import { ContentProjectionComponent } from './components/content-projection/content-projection.component';
 import { SwitchComponent } from './components/switch/switch.component';
 import { ForDemoComponent } from './components/for-demo/for-demo.component';
+import { ForDemoFakestoreComponent } from './components/for-demo-fakestore/for-demo-fakestore.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,14 @@ import { ForDemoComponent } from './components/for-demo/for-demo.component';
     ChildComponent,
     ContentProjectionComponent,
     SwitchComponent,
-    ForDemoComponent
+    ForDemoComponent,
+    ForDemoFakestoreComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  bootstrap: [ForDemoComponent]
+  bootstrap: [ForDemoFakestoreComponent]
 })
 export class AppModule { }
