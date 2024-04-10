@@ -12,6 +12,7 @@ import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
 import { ContentProjectionComponent } from './components/content-projection/content-projection.component';
 import { SwitchComponent } from './components/switch/switch.component';
+import { ForDemoComponent } from './components/for-demo/for-demo.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +25,14 @@ import { SwitchComponent } from './components/switch/switch.component';
     ParentComponent,
     ChildComponent,
     ContentProjectionComponent,
-    SwitchComponent
+    SwitchComponent,
+    ForDemoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  bootstrap: [ContentProjectionComponent]
+  bootstrap: [ForDemoComponent]
 })
 export class AppModule { }

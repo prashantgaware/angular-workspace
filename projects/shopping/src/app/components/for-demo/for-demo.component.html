@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <div class="row mt-4">
+        <div class="col">
+            <ol>
+                <li *ngFor="let item of Categories">{{item}}</li>
+            </ol>
+        </div>
+        <div class="col">
+            <select>
+                <option   *ngFor="let item of Categories">{{item}}</option>
+            </select>
+        </div>
+    </div>
+</div>
