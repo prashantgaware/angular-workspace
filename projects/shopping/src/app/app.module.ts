@@ -17,6 +17,7 @@ import { ForDemoFakestoreComponent } from './components/for-demo-fakestore/for-d
 import { ForDemoTrackByComponent } from './components/for-demo-track-by/for-demo-track-by.component';
 import { NasaApiComponent } from './components/nasa-api/nasa-api.component';
 import { CardComponent } from './components/card/card.component';
+import { ShopperComponent } from './components/shopper/shopper.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +35,14 @@ import { CardComponent } from './components/card/card.component';
     ForDemoFakestoreComponent,
     ForDemoTrackByComponent,
     NasaApiComponent,
-    CardComponent
+    CardComponent,
+    ShopperComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  bootstrap: [NasaApiComponent]
+  bootstrap: [ShopperComponent]
 })
 export class AppModule { }
