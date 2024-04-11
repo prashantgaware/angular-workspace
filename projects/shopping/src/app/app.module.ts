@@ -14,6 +14,9 @@ import { ContentProjectionComponent } from './components/content-projection/cont
 import { SwitchComponent } from './components/switch/switch.component';
 import { ForDemoComponent } from './components/for-demo/for-demo.component';
 import { ForDemoFakestoreComponent } from './components/for-demo-fakestore/for-demo-fakestore.component';
+import { ForDemoTrackByComponent } from './components/for-demo-track-by/for-demo-track-by.component';
+import { NasaApiComponent } from './components/nasa-api/nasa-api.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +31,16 @@ import { ForDemoFakestoreComponent } from './components/for-demo-fakestore/for-d
     ContentProjectionComponent,
     SwitchComponent,
     ForDemoComponent,
-    ForDemoFakestoreComponent
+    ForDemoFakestoreComponent,
+    ForDemoTrackByComponent,
+    NasaApiComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  bootstrap: [ForDemoFakestoreComponent]
+  bootstrap: [NasaApiComponent]
 })
 export class AppModule { }
