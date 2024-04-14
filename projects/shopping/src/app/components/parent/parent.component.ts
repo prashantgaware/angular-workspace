@@ -7,8 +7,13 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
   public msg:string = '';
+  public msgFromChild = '';
 
   public SendClick():void{
     this.msg = 'Hello ! from Parent..'
+  }
+
+  public GetMsgFromChild(e:string){
+      this.msgFromChild = e;
   }
 }
