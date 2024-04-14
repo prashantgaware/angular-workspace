@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent {
+  public msg:string = '';
 
+  public SendClick():void{
+    this.msg = 'Hello ! from Parent..'
+  }
 }

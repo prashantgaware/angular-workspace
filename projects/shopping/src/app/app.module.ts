@@ -22,6 +22,7 @@ import { ClassBindingComponent } from './components/class-binding/class-binding.
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
 import { EmiComponent } from './components/emi/emi.component';
 import { BmiComponent } from './components/bmi/bmi.component';
+import { PatentComponent } from './components/patent/patent.component';
 
 @NgModule({
   declarations: [
@@ -44,13 +45,14 @@ import { BmiComponent } from './components/bmi/bmi.component';
     ClassBindingComponent,
     EventBindingComponent,
     EmiComponent,
-    BmiComponent
+    BmiComponent,
+    PatentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  bootstrap: [BmiComponent]
+  bootstrap: [ParentComponent]
 })
 export class AppModule { }
