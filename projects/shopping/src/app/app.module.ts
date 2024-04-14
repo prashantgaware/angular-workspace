@@ -19,6 +19,9 @@ import { NasaApiComponent } from './components/nasa-api/nasa-api.component';
 import { CardComponent } from './components/card/card.component';
 import { ShopperComponent } from './components/shopper/shopper.component';
 import { ClassBindingComponent } from './components/class-binding/class-binding.component';
+import { EventBindingComponent } from './components/event-binding/event-binding.component';
+import { EmiComponent } from './components/emi/emi.component';
+import { BmiComponent } from './components/bmi/bmi.component';
 
 @NgModule({
   declarations: [
@@ -38,13 +41,16 @@ import { ClassBindingComponent } from './components/class-binding/class-binding.
     NasaApiComponent,
     CardComponent,
     ShopperComponent,
-    ClassBindingComponent
+    ClassBindingComponent,
+    EventBindingComponent,
+    EmiComponent,
+    BmiComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  bootstrap: [ClassBindingComponent]
+  bootstrap: [BmiComponent]
 })
 export class AppModule { }
