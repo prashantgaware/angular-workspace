@@ -18,6 +18,7 @@ import { ForDemoTrackByComponent } from './components/for-demo-track-by/for-demo
 import { NasaApiComponent } from './components/nasa-api/nasa-api.component';
 import { CardComponent } from './components/card/card.component';
 import { ShopperComponent } from './components/shopper/shopper.component';
+import { ClassBindingComponent } from './components/class-binding/class-binding.component';
 
 @NgModule({
   declarations: [
@@ -36,13 +37,14 @@ import { ShopperComponent } from './components/shopper/shopper.component';
     ForDemoTrackByComponent,
     NasaApiComponent,
     CardComponent,
-    ShopperComponent
+    ShopperComponent,
+    ClassBindingComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  bootstrap: [ShopperComponent]
+  bootstrap: [ClassBindingComponent]
 })
 export class AppModule { }
