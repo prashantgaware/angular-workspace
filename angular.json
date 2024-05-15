@@ -184,6 +184,94 @@
           }
         }
       }
+    },
+    "angular-material-learning": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/angular-material-learning",
+      "sourceRoot": "projects/angular-material-learning/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/angular-material-learning",
+            "index": "projects/angular-material-learning/src/index.html",
+            "browser": "projects/angular-material-learning/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/angular-material-learning/tsconfig.app.json",
+            "assets": [
+              "projects/angular-material-learning/src/favicon.ico",
+              "projects/angular-material-learning/src/assets"
+            ],
+            "styles": [
+              "projects/angular-material-learning/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "angular-material-learning:build:production"
+            },
+            "development": {
+              "buildTarget": "angular-material-learning:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "angular-material-learning:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/angular-material-learning/tsconfig.spec.json",
+            "assets": [
+              "projects/angular-material-learning/src/favicon.ico",
+              "projects/angular-material-learning/src/assets"
+            ],
+            "styles": [
+              "projects/angular-material-learning/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   }
 }
