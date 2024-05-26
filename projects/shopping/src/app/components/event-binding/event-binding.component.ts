@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class EventBindingComponent {
 
+  public InsertClick(e: any): void {
+    console.log(e);
+    console.log(e.target.name);
+    console.log(e.target.id);
+    
+  }
 }

@@ -22,8 +22,10 @@ export class DialogTestComponent {
   openDialog(): void {
     this.dialog.open(DialogComponent, {
       width: '50%',
-      height: '40%'
-
+      height: '40%',
+      data: {
+        
+      }
     });
   }
 
