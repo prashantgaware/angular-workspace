@@ -21,16 +21,19 @@ export class ShopperComponent implements OnInit{
     
   }
 
+  /** */
   public GetCartItemsCount(){
     this.CartItemsCount = this.CartItems.length;
   }
 
+  /** */
   ngOnInit(): void {
       this.LoadCategories();
       this.LoadProducts("http://fakestoreapi.com/products");
       this.GetCartItemsCount();
   }
 
+    /** */
   public LoadCategories():void{
     fetch("http://fakestoreapi.com/products/categories")
     .then(response=> response.json())
@@ -40,6 +43,7 @@ export class ShopperComponent implements OnInit{
     })
   }
 
+  /** */
   public LoadProducts(url:string):void{
     fetch(url)
     .then(response=> response.json())
@@ -48,6 +52,7 @@ export class ShopperComponent implements OnInit{
     })
   }
 
+  /** */
   public CategoryChanges(categoryName:string):void{
     if (categoryName=='all') {
       this.LoadProducts(`http://fakestoreapi.com/products`);
@@ -56,6 +61,7 @@ export class ShopperComponent implements OnInit{
     }
   }
 
+  /** */
   public AddtoCartClick(id:number):void{
     fetch(`http://fakestoreapi.com/products/${id}`)
     .then(Response => Response.json())
@@ -66,10 +72,12 @@ export class ShopperComponent implements OnInit{
     })
   }
 
+  /** */
   public ToggleCart():void{
     this.isCartVisible = (this.isCartVisible==false)?true:false;
   }
 
+  /** */
   public RemoveClick(index:number):void{
     var flag = confirm(`Are yo sure want to delete?`);
     if(flag == true){
