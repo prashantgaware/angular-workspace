@@ -53,6 +53,6 @@ import { PatentComponent } from './components/patent/patent.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [EventBindingComponent]
+  bootstrap: [HomeComponent]
 })
 export class AppModule { }
